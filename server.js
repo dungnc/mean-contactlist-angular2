@@ -7,7 +7,9 @@ var CONTACTS_COLLECTION = "contacts";
 
 var app = express();
 app.use(bodyParser.json());
-app.use(express.json());
+app.use(bodyParser.urlencoded({
+                              extended: true
+                              }));
 
 // Create link to Angular build directory
 var distDir = __dirname + "/dist/";
